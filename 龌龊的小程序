@@ -1,0 +1,32 @@
+# include <stdio.h>
+# include <windows.h>
+# include <malloc.h>
+
+int main(void)
+{
+  int c, i, j;
+  
+  nihao:
+  printf("1、关机\n");
+  printf("2、机房爆炸\n");
+  printf("请输入数字1或数字2:\n");
+  
+  scanf("%d", &c);
+  
+  if (1 == c)
+  {
+    system("shutdown -s -t 60"); //60表示1分钟后关机，数字越小关机越快
+  }
+  else if (2 == c)
+  {
+    for (j=1; j<10; ++j) //10表示出现10次弹窗，数字越大弹窗越多
+      system("start");
+  }
+  else
+  {
+    printf("输入格式错误,请重新输入");
+    goto nihao;
+  }
+
+  return 0;
+}
