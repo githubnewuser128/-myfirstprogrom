@@ -1,0 +1,31 @@
+# include <stdio.h>
+
+int main(void)
+{
+  float a, b;
+  char c;
+  
+  printf("请输入你要计算的两个值：");
+  scanf("%f%c%f", &a, &c, &b);
+  
+  switch (c)
+  {
+    case '+':
+      printf("%f + %f = %f\n", a, b, a+b);
+      break;
+    case '-':
+      printf("%f - %f = %f\n", a, b, a-b);
+      break;
+    case '*':
+      printf("%f * %f = %f\n", a, b, a*b);
+      break;
+    case '/':
+      printf("%f / %f = %f\n", a, b, a/b);
+      break;
+    default:
+      printf("输入格式错误\n");
+      break;
+  }
+  
+  return 0;
+}
