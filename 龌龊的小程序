@@ -9,7 +9,7 @@ int main(void)
   nihao:
   printf("1、关机\n");
   printf("2、机房爆炸\n");
-  printf("请输入数字1或数字2:\n");
+  printf("请输入数字1或数字2:");
   
   scanf("%d", &c);
   
