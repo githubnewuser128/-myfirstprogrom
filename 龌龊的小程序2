@@ -1,0 +1,11 @@
+# include <stdio.h>
+# include <malloc.h>
+
+int main(void)
+{
+  while (1)
+  {
+    int *p = (int *)malloc(1000); //数字越大，电脑卡机越快
+  }
+  return 0;
+}
