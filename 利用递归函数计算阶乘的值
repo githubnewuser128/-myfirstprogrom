@@ -1,0 +1,29 @@
+#include <stdio.h> 
+
+int factorial( int nA); 
+
+void main( ) 
+{ 
+	int nF,nX; 
+	puts("Enter an integer value between 1 and 8: "); 
+	scanf("%d", &nX); 
+	if( nX> 8 || nX < 1) 
+	{ 
+		printf("Only values from 1 to 8 are acceptable!");} 
+	else 
+	{ 
+		nF = factorial(nX); 
+		printf("%u factorial equals %u\n",nX,nF); 
+	} 
+}
+ 
+int factorial(int nA) 
+{ 
+	if (nA== 1) 
+		return 1; 
+	else 
+	{ 
+		nA *= factorial(nA-1); 
+		return nA; 
+	} 
+}
